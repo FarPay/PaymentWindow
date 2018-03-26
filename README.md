@@ -7,7 +7,7 @@ This is a description of how to configure the payment window in your domain.
 ## Terms
 There are a couple of terms, that are in play, when running the Payment Window endpoint.
 || Term || Description || available from ||
-| Order API | The order is placed from your business domain system, initiating an onboarding process | (Order)[https://github.com/FarPay/ApiDoc/blob/master/Orders.md] and (Swagger)[https://api.farpay.io/swagger/ui/index#/Orders]
+| Order API | The order is placed from your business domain system, initiating an onboarding process | [Order](https://github.com/FarPay/ApiDoc/blob/master/Orders.md) and (Swagger)[https://api.farpay.io/swagger/ui/index#/Orders]
 | Payment Window | An url, that the user is forwarded to, when the payment information is to be set. | (Payment Window)[https://app.farpay.io/paymentWindow]
 
 # Use-Case
