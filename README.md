@@ -1,5 +1,5 @@
-# PaymentWindow
-The FarPay PaymentWindow, is a secured payment window, that encapsulates all payment instruments, that are available in your FarPay subscription, enable your existing or new customers to create an payment instrument as well as starting a recurring payment flow.
+# Payment Window
+The secure FarPay Payment Window encapsulates all payment instruments, that are available in your FarPay subscription, enable your existing or new customers to create an payment instrument as well as starting a recurring payment flow.
 
 ## Scope
 This is a description of how to interact with payment window in your domain system.
@@ -17,12 +17,13 @@ There are a couple of terms, that are in play, when running the Payment Window e
 | Payment Window Url | An url, that the user is forwarded to, when the payment information is to be set. | |
 
 # Scenario: User creates an payment agreement
-This scenario, a web-user (Actor), wants to pay for a service or product, by interacting with a domain system - e.g. a magazine.
-The in the domain-system, the user has specified what services, and/or products that he/she wants to pay for.
+This scenario, a web-user (Actor), wishes to pay for a service or product, by interacting with a domain system.
+As the actor, has selected the services or product, the domain system starts interacting with FarPay, to complete the payment as well as the recurring payments. 
 
 ## Sequence - Payment window
 ![UML Sequence diagram](UML-Seq-overview.png)
-When the FarPay domain comes to play, is after the user has engaged with the domain system, and moving forwared to the finalizing payment part. This phase is initiated by requesting an Order from the FarPay API. And to create an order, following values must be specified:
+
+The FarPay domain comes to play after the user has engaged with the domain system, and is now moving forwared to the finalizing payment and subscription part. This phase is initiated by requesting an Order from the FarPay API. And to create an order, following steps must be executed:
 
 | Step      | Description | Result |
 | :---      | :----       | :---   |
