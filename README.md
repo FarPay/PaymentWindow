@@ -10,7 +10,7 @@ There are a couple of terms, that are in play, when running the Payment Window e
 | Term      | Description |  Available from |
 | :---      | :----       |            ---: |
 | Order API | The order is placed from your business domain system, initiating an onboarding process | [Order](https://github.com/FarPay/ApiDoc/blob/master/Orders.md) and [Swagger](https://api.farpay.io/swagger/ui/index#/Orders) |
-| Order     | The order, that is placed from the your business/domain system, to the FarPay Order API endpoint.| |
+| Order     | The order, that is placed from the your business/domain system, to the FarPay Order API endpoint.| [Example order request](#example-request) |
 | OrderResponse | The response, holding the ``OrderToken``, ``ExternalID`` and ``PaymentWindowUrl``| See the [Order details] |
 | OrderToken | FarPay internal reference to that specific order | |
 | ExternalID | The reference point in your domain system, when receiving orders from FarPay | |
