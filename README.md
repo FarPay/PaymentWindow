@@ -2,7 +2,8 @@
 The secure FarPay Payment Window encapsulates all payment instruments, that are available in your FarPay subscription, enable your existing or new customers to create an payment instrument as well as starting a recurring payment flow.
 
 ## Scope
-This is a description of how to interact with payment window in your domain system.
+This is a description of how to interact with payment window in your domain system. The overall flow and screens in the payment window are shown here
+![Screens-flow diagram of the payment window](Flow-overview.png)
 
 ## Terms
 There are a couple of terms, that are in play, when running the Payment Window endpoint.
