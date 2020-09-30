@@ -44,9 +44,13 @@ The order is also mentioned in the API, but for clarity, the documentation here 
 | ``CancelUrl`` | ``string`` | The Url that you want the user to be forwarded to on cancellation | M |
 | ``CallbackUrl`` | ``string`` | The Url that the FarPay system should signal, when the payment window has completed its tasks | M |
 | ``Lang`` | ``string`` | The language is specified here - accepted values are ``en`` for English, ``da`` for Danish and ``fo`` for Faroese. This is an optional value, but is highly recomended to be set to the desired language. When not set, the payment window will return to English as the default language.| O |
+
+## Customer object
+| Name      | Value | Description | M/O |
+| :---      | :---- |        ---: |                          ---: |
 | ``CustomerNumber`` | ``string`` | Customer number, is key to the customer. This is an optional value, and can be updated on the order object later on | O |
-| ``CustomerName`` | ``string`` | Customer name is also optional, and can be set later on | O |
-| ``CustomerEmail`` | ``string`` | Customer e-mail address is optional too, and can be set later on | O |
+| ``Name`` | ``string`` | Customer name is also optional, and can be set later on | O |
+| ``Email`` | ``string`` | Customer e-mail address is optional too, and can be set later on | O |
 
 _(Remark: The last column is marked M as Mandatory or O as Optional)_
 
@@ -78,9 +82,11 @@ Here is an example of a **order request** with all the reference Url's, language
   "CancelUrl": "https://companyDomain.com/component/likeToContinue.html",
   "CallbackUrl": "https://backend.companyDomain.io/farpayCallback",
   "Lang": "en",
-  "CustomerNumber": "1000",
-  "CustomerName": "John Hansen",
-  "CustomerEmail": "john@hsen.dk",
+  "Customer": {
+    "CustomerNumber": "test1000",
+    "Name": "John Hansen",
+    "Email": "john@hsen.dk
+  },
   "Payment": {
     "Amount": 95.50,
     "Currency": "DKK",
