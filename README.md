@@ -59,6 +59,9 @@ In addition to these information, the order can also contain an _optional node_ 
 | ``Payment.Currency`` | ``string`` | ``DKK`` is the only currency available when using _Betalingsservice_, _Leverandørservice_ and _MobilePay_ Card can use all common used currencies in scandinavian/European countries |
 | ``Payment.Description`` | ``string`` | A description, that is sent to the user on the payment window, and to the device running _MobilePay_ |
 | ``Payment.Reference`` | ``string`` | Your internal reference of the payment |
+| ``Payment.InvoiceId`` | ``string`` | Reference an invoice by a FarPay Invoice ID - to be paid by this payment event |
+| ``Payment.InvoceNumber`` | ``string`` | Reference an invoice by the invoicenumber, to be paid by this payment event |
+
 
 # Specify the customer
 Momentarily after the user has input his/her payment info, the customer information can be set.
