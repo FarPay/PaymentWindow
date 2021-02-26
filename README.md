@@ -39,7 +39,7 @@ The order is also mentioned in the API, but for clarity, the documentation here 
 
 | Name      | Value | Description | M/O |
 | :---      | :---- |        ---: |                          ---: |
-| ``ExternalID`` | ``string`` | Your internal reference, that you want FarPay to put in the response | M |
+| ``ExternalID`` | ``string`` | Your internal reference, that you want FarPay to put in the response. | M |
 | ``AcceptUrl`` | ``string`` | The Url that you want that user to be forwarded to on completed and successfull form inupt | M |
 | ``CancelUrl`` | ``string`` | The Url that you want the user to be forwarded to on cancellation | M |
 | ``CallbackUrl`` | ``string`` | The Url that the FarPay system should signal, when the payment window has completed its tasks | M |
@@ -55,10 +55,10 @@ In addition to these information, the order can also contain an _optional node_ 
 
 | Name      | Value | Description | 
 | :---      | :---- |        ---: | 
-| ``Amount`` | ``decimal`` | decimal number e.g. ``6.50`` |
-| ``Currency`` | ``string`` | ``DKK`` is the only currency available when using _Betalingsservice_, _Leverandørservice_ and _MobilePay_ Card can use all common used currencies in scandinavian/European countries |
-| ``Description`` | ``string`` | A description, that is sent to the user on the payment window, and to the device running _MobilePay_ |
-| ``Reference`` | ``string`` | Your internal reference of the payment |
+| ``Payment.Amount`` | ``decimal`` | decimal number e.g. ``6.50`` |
+| ``Payment.Currency`` | ``string`` | ``DKK`` is the only currency available when using _Betalingsservice_, _Leverandørservice_ and _MobilePay_ Card can use all common used currencies in scandinavian/European countries |
+| ``Payment.Description`` | ``string`` | A description, that is sent to the user on the payment window, and to the device running _MobilePay_ |
+| ``Payment.Reference`` | ``string`` | Your internal reference of the payment |
 
 # Specify the customer
 Momentarily after the user has input his/her payment info, the customer information can be set.
