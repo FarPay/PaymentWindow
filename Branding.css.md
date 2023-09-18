@@ -87,6 +87,8 @@ a {
 
 
 ## Form 
+In cases of form input, such as an optional e-mail input.
+
 
 ```
 /* ---------------------------
