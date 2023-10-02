@@ -97,3 +97,25 @@ Here is an example of a **order request** with all the reference Url's, language
   "Status" : "Ok"
 }
 ```
+
+# Customization of the payment window
+There are two ways of customizing the user experience, where the first is the branding of the payment window, and the second is to use your own domain.
+
+## Branding of the payment window
+The payment window can be branded to match your company's visual identity, by encorporating colors and logo.
+
+This is done by providing a CSS file ``branding.css``, that is loaded into the payment window.
+The CSS file is oploaded to FarPay support, in a ticket, where a support technichan will insert
+the CSS into to the payment window, where the user will experience a customized payment window.
+
+Further information of how to express further details in the Branding is available from the [Branding](Branding.css.md) section.
+
+## Own domain
+Own domain is also an additional option, where your company can be set as the domain e.g. 
+as ``https://payment.companyDomain.com``. 
+
+This is done setting a DNS-record, as proof of concent, where the certificate will be placed in
+FarPay' certificate store, and will be managed and renewed prior to expiration. 
+
+When the certificate is created, a support technichan will insert the certificate into to
+the payment window, where the user will experience a customized payment window.
