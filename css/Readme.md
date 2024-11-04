@@ -1,0 +1,151 @@
+# Custom CSS
+
+The payment window can be branded to match your company's visual identity, by incorporating colors and logo.
+This is done by overriding the default CSS with your own CSS file, and the file is cascaded onto the payment-window CSS.
+
+## Images
+The images, that are used, are standard images, such as the back button, cancel button, and the hamburger menu button, etc.
+You have the option to override the image, by linking to own resources, and load it on the fly.
+```css
+
+    #top .top-logo {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSU.....==') no-repeat center;
+    background-size: 199px 29px;
+    height: 29px;
+    margin-top: 23px;
+    }
+```
+Remember, that this will slow down the duration of the page, load since the image caching is not available.
+
+## Basic terms
+The terms that can be customized are:
+
+| **Element**                 | **Description**                                                                                                       |
+|-----------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `body`                      | body element, containing the backgrgound color                                                                        |
+| `#top`                      | background color of the top of the page, that also contains the logo                                                  |
+| `#top .back-btn`            | back button background:image: url(...)                                                                                |
+| `#top .cancel-btn`          | cancel button background:image: url(...)                                                                              |
+| `#top .menu-btn .menu-icon` | menu button background:image: url(...) this is the hamburger logo                                                     |
+| `#top .top-logo`            | background:image: url(...);                                                                                           |
+| `.pink-color`               | <font color="e83f6f">color: #e83f6f; </font> This color is used to express concerns, such as reject and cancel events |
+| `#top .top-logo img`        | reference to a logo, or `display: none`, since you have embedded the login in the css.                                |
+| `a`                         | anchor color - e.g. links to terms and conditions within the payment window.                                          |
+
+
+
+## The Form
+
+| **Element**                              | **Description**                        |
+|------------------------------------------|----------------------------------------|
+| `form .form-group.has-border:before`     | set background color                   |
+| `.switch.switch input:checked + .slider` | set the background color of the slider |
+
+
+## The ribbon
+
+| **Element**                      | **Description**                                                      |
+|----------------------------------|----------------------------------------------------------------------|
+| `.screen-ribbon.reminder-ribbon` | When the ribbon is used, it should stand out with an alerting color. |
+
+
+## Reminder
+Funfact - we name it the metro, since it is a process diagram, that is displayed on the screen, just as a typical metro map.
+
+| **Element**                                                | **Description**                                                                                              |
+|------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| `.reminder-metro .reminder-item .metro-line `              | The line                                                                                                     |
+| `reminder-metro .reminder-item .metro-line:before`         | an item on the metro-line                                                                                    |
+| `.reminder-metro .reminder-item.active .metro-line:before` | The current state of the process, the current position on the metroline, that should be slightly highlighed. |
+
+
+
+#Full example
+
+```css
+/* ---------------------------
+ BASIC
+ --------------------------- */
+ body {
+    background: #eef3f6 !important;
+  }
+  #top {
+    background: #005a95 !important;
+  }
+  #top .back-btn {
+    background-image: url('./../v2/assets/img/icons/icon-back-white.png') !important;
+  }
+  #top .cancel-btn {
+    background-image: url('./../v2/assets/img/icons/icon-close-white.png') !important;
+  }
+  #top .menu-btn .menu-icon {
+    background-image: url('./../v2/assets/img/icons/icon-menu-burger-white.png') !important;
+  }
+  #top .menu-btn span {
+    color: #fff;
+  }
+  #top .top-logo {
+    background: url('data:image/png;base64,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') no-repeat center;
+    background-size: 199px 29px;
+    height: 29px;
+    margin-top: 23px;
+  }
+  #top .top-logo img {
+    display: none;
+  }
+  a {
+    color: #009de5 !important;
+  }
+  .btn.do-pay-btn, .btn.choose-method, .btn.btn-continue, .btn.btn-blue {
+    background: #63ba03;
+    color: #fff;
+  }
+  .btn.do-pay-btn:disabled, .btn.choose-method:disabled, .btn.btn-continue:disabled, .btn.btn-blue:disabled {
+    background: #cdcccc;
+    opacity: 1;
+    pointer-events: none;
+  }
+  .btn.do-pay-btn:hover, .btn.choose-method:hover, .btn.btn-continue:hover, .btn.btn-blue:hover, .btn.do-pay-btn:focus, .btn.choose-method:focus, .btn.btn-continue:focus, .btn.btn-blue:focus {
+    background: #56a103;
+  }
+  .app-menu .menu-lang-switch ul li a.active {
+    border-color: #009de5 !important;
+  }
+  .pink-color {
+    color: #e83f6f !important;
+  }
+  /* ---------------------------
+   FORM
+   --------------------------- */
+  form .form-group.has-border:before {
+    background: #009de5 !important;
+  }
+  .switch.switch input:checked + .slider {
+    background: #009de5 !important;
+    border-color: #009de5 !important;
+  }
+  .table tr {
+    border-color: #eef3f6 !important;
+  }
+  /* ---------------------------
+   RIBBON REMINDER
+   --------------------------- */
+  .screen-ribbon.reminder-ribbon {
+    background: #e83f6f !important;
+  }
+  /* ---------------------------
+   METRO REMINDER
+   --------------------------- */
+  .reminder-metro .reminder-item .metro-line {
+    background: #009de5 !important;
+  }
+  .reminder-metro .reminder-item .metro-line:before {
+    border-color: #009de5 !important;
+  }
+  .reminder-metro .reminder-item.active .metro-line:before {
+    background: #009de5 !important;
+  }
+  /* ---------------------------
+   INVOICE
+   --------------------------- */
+   ```
