@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad9e7a54-3f74-40c5-b8de-7341a0209928" name="Changes" comment="adding css example">
-      <change beforePath="$PROJECT_DIR$/css/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/css/Readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="ad9e7a54-3f74-40c5-b8de-7341a0209928" name="Changes" comment="smaller image" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +42,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding css example" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding css example" />
+    <MESSAGE value="smaller image" />
+    <option name="LAST_COMMIT_MESSAGE" value="smaller image" />
   </component>
 </project>
