@@ -42,7 +42,7 @@ The order is also mentioned in the API, but for clarity, the documentation here 
 | ``ExternalID`` | ``string`` | Your internal reference, that you want FarPay to put in the response. | M |
 | ``AcceptUrl`` | ``string`` | The Url that you want that user to be forwarded to on completed and successfull form inupt | M |
 | ``CancelUrl`` | ``string`` | The Url that you want the user to be forwarded to on cancellation | M |
-| ``CallbackUrl`` | ``string`` | The Url that the FarPay system should signal, when the payment window has completed its tasks | M |
+| ``CallbackUrl`` | ``string`` | The Url that the FarPay system should signal, when the payment window has completed its tasks. When not specified, it will fallback to the standard CallbackUrl specefied for Orders | O |
 | ``Lang`` | ``string`` | The language is specified here - accepted values are ``en`` for English, ``da`` for Danish and ``fo`` for Faroese. This is an optional value, but is highly recomended to be set to the desired language. When not set, the payment window will return to English as the default language.| O |
 | ``Customer.CustomerNumber`` | ``string`` | Customer number, is key to the customer. This is an optional value, and can be updated on the order object later on | O |
 | ``Customer.Name`` | ``string`` | Customer name is also optional, and can be set later on | O |
